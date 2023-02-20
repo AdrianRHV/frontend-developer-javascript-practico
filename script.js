@@ -13,6 +13,11 @@ menuCarritoIcon.addEventListener('click', toggleShoppingCartMenu);
 
 function toggleDesktopMenu() {
   console.log('Click');//debugg
+  const isAsideClosed = aside.classList.contains('inactive');
+  if (!isAsideClosed) {
+    aside.classList.add('inactive')
+    } 
+
   desktopMenu.classList.toggle('inactive');
 }
 
@@ -29,10 +34,14 @@ function toggleShoppingCartMenu() {
   console.log('Click');//debugg
 
   const isMobileMenuClosed = mobileMenu.classList.contains('inactive');
+  const isDesktopMenuClosed = desktopMenu.classList.contains('inactive');
+
   if (!isMobileMenuClosed) {
     mobileMenu.classList.add('inactive')
     } 
-  
+  if (!isDesktopMenuClosed) {
+    desktopMenu.classList.add('inactive')
+  }
     aside.classList.toggle('inactive');
 }
 
