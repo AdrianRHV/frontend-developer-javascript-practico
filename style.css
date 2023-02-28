@@ -126,9 +126,10 @@ nav {
 /*Menu de Mobile*/
 .mobile-menu{
   position: absolute;
-  top: 60px;
-  left: 60px;
+  top: 61px;
+  left: 0px;
   padding: 24px;
+  background: var(--white);
 }
 .mobile-menu a{
   text-decoration: none;
@@ -166,7 +167,7 @@ nav {
   box-sizing: border-box;
   position: absolute;
   right: 0;
-  top: 62px;
+  top: 61px;
 }
 .my-order-content {
   display: flex;
@@ -237,10 +238,68 @@ nav {
   font-weight: bold;
 }
 
+/* Pdoruct list*/
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  gap: 26px;
+  margin-top: 20px;
+  place-content: center;
+}
+.product-card {
+  width: 240px;
+}
+.product-card img{
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.info-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.info-product figure{
+margin: 0;
+}
+.info-product figure img{
+  width: 35px;
+  height: 35px;
+}
+.info-product div p:nth-child(1) {
+  font-weight: bold;
+  font-size: var(--md);
+  margin-top: 0px;
+  margin-bottom: 4px;
+}
+.info-product div p:nth-child(2) {
+  font-size: var(--md);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: var(--very-light-pink);
+}
+
+
 @media (max-width: 640px) {
   .product-detail {
     width: 100%;
   }
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 120px);
+    gap: 26px;
+    }
+    .product-card {
+      width: 120px;
+    }
+    .product-card img{
+      width: 120px;
+      height: 120px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
 }
 
 @media (max-width : 640px) {
