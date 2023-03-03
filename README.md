@@ -1,1 +1,1 @@
-# curso-frontend.developer-javascript-practico
+# frontend.developer-javascript-practico
